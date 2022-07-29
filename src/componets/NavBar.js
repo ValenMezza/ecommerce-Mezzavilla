@@ -1,16 +1,13 @@
-function App() {
+const NavBar = function Nav() {
     return (
-        <header>
-            <h1>Clase de React Js</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                </ul>
-            </nav>
-        </header>
-    )
+        <nav class="nav-list">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Categorías</a></li>
+                <li><a href="#">Contacto</a></li>
 
+            </ul>
+        </nav>
+    )
 }
-export default App;
+export default NavBar;

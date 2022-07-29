@@ -1,17 +1,14 @@
-// function App() {
-//     return (
-//         <header>
-//             <h1>Clase de React Js</h1>
-//             <nav>
-//                 <ul>
-//                     <li><a href="#">Link 1</a></li>
-//                     <li><a href="#">Link 2</a></li>
-//                     <li><a href="#">Link 3</a></li>
-//                 </ul>
-//             </nav>
-//         </header>
-//     )
+import React from "react";
+import Header from "./header.js";
+import Footer from './footer.js';
+function App() {
+    return (
+        <Header>
 
-// }
-// export default App;
+        </Header>
+    )
+}
+
+Footer()
+export default App;
 
