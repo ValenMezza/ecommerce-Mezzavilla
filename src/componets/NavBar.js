@@ -1,3 +1,4 @@
+import Greeting from "./greeting.js";
 const NavBar = function Nav() {
     return (
         <nav class="nav-list">
@@ -7,7 +8,11 @@ const NavBar = function Nav() {
                 <li><a href="#">Contacto</a></li>
 
             </ul>
-        </nav>
+        </nav>    
+            // <div>
+            //     <Greeting></Greeting>
+            // </div>
+        
     )
 }
 export default NavBar;
