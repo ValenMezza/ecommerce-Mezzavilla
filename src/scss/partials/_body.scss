@@ -7,3 +7,23 @@
 h1{
     color: black;
 }
+.carrito-count{
+    margin-top: 2vh;
+    margin-right: 2vw;
+    float: right;
+    text-align: center;
+    width: 30%;
+    background-color: rgb(213, 215, 88);
+    border: solid 2px blue;
+    & button{
+        justify-content: center;
+        width: fit-content;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        padding-top: 2%;
+        padding-right: 2%;
+        padding-left: 2%;
+    }
+}

@@ -1,9 +1,13 @@
-import React from "react";
+import NavBar from "./NavBar";
+import {useState} from "react"
 
-const footer = () => {
-  return (
-    <div>footer</div>
+
+function Footer() {
+  return(
+    <><h1>HOLA MUNDO</h1>
+    <NavBar></NavBar>
+    </>
   )
 }
 
-export default footer
+export default Footer

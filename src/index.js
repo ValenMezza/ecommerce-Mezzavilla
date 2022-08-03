@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './componets/App';
-import App from './componets/App.js'
+import App from './App'
 
 import "../src/scss/partials/_header.scss"
 import "../src/scss/partials/_body.scss"

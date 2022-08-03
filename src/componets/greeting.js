@@ -1,7 +1,7 @@
 const Greeting = function Greeting(){
     return(
         <div>
-            <h1>Acá se mostrará el catálogo</h1>
+            <h1>Acá se mostrará el catálogoo</h1>
         </div>
     )
 }
