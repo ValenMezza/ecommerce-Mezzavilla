@@ -1,0 +1,11 @@
+footer{
+    background-color: red;
+    font-size: 100px;
+    & .nav-list{
+        list-style: none;
+        text-decoration: none;
+        color: violet
+    }
+    width: 100%;
+    display: block;
+}

@@ -1,3 +1,5 @@
+@import "../variables/-variables.scss";
+
 header {
     height: fit-content;
     & .img-carrito {
@@ -18,15 +20,15 @@ header {
         display: block;
         float: right;
         margin-right: 1vw;
-        background-color: rgb(213, 215, 88);
-        border: solid 2px blue;
+        background-color: $yellow_page;
+        border: solid 2px $blue_page;
         padding:1%;
 
     }
 
     & nav {
-        border: solid 2px blue;
-        background-color: rgb(213, 215, 88);
+        border: solid 2px $blue_page;
+        background-color:$yellow_page;
         padding: 1%;
         display: block;
 

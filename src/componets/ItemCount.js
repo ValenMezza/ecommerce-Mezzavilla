@@ -1,41 +1,46 @@
 import Header from "./header"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 function ItemCount() {
-    const Resultado = useState(0)
-    let contador = Resultado[0]
-    const setContador = Resultado[1]
+    const [contador, setContador] = useState(0)
+
+    // let contador = Resultado[0]
+    // const setContador = Resultado[1]
     const stockDisponible = 10
 
-    console.log(Resultado)
+    // console.log(Resultado)
     function addCarrito() {
         if (contador === stockDisponible) {
-            return(
+            return (
                 contador
             )
         }
-        setContador(contador +1)
+        setContador(contador + 1)
+        setTimeout(() => {
+            console.log("añadiste un producto al carrito")
+        }, 10)
         console.log(contador)
     }
     function outCarrito() {
         if (contador === 0) {
-            return(
+            return (
                 <p>No hay productos en el carrito</p>
             )
         }
-        setContador(contador -1)
+        setContador(contador - 1)
         console.log(contador)
     }
-    return(
+    return (
         <>
-        <div className="carrito-count">
-            <h5><p>Productos en el carrito={contador}</p></h5>
-            <button onClick={outCarrito}>-</button>
-            <button>Agregar al carrito</button>
-            <button onClick={addCarrito}>+</button>
-        </div>
-        
+            <div className="carrito-count">
+                <h5><p>Productos en el carrito: </p></h5>
+                <p>{contador}</p>
+                <button onClick={outCarrito}>-</button>
+                <button>Agregar al carrito</button>
+                <button onClick={addCarrito}>+</button>
+            </div>
+
         </>
     )
 }
