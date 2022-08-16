@@ -6,10 +6,6 @@ import App from './App'
 
 import "../src/scss/partials/_header.scss"
 import "../src/scss/partials/_body.scss"
-import "../src/scss/partials/_main.scss";
-import "../src/scss/partials/_aside.scss";
-import "../src/scss/partials/_footer.scss";
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 

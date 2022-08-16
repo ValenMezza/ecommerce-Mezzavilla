@@ -5,27 +5,27 @@
     // background-color: beige
     ;
 }
-// h1{
-//     color: black;
-// }
-// .carrito-count{
-//     display: block;
-//     margin-top: 2vh;
-//     margin-right: 2vw;
-//     float: right;
-//     text-align: center;
-//     width: 30%;
-//     background-color:$yellow_page;
-//     border: solid 2px $blue_page;
-//     & button{
-//         justify-content: center;
-//         width: fit-content;
-//         margin-left: 2vw;
-//         margin-right: 2vw;
-//         margin-top: 2vh;
-//         margin-bottom: 2vh;
-//         padding-top: 2%;
-//         padding-right: 2%;
-//         padding-left: 2%;
-//     }
-// }
+h1{
+    color: black;
+}
+.carrito-count{
+    display: block;
+    margin-top: 2vh;
+    margin-right: 2vw;
+    float: right;
+    text-align: center;
+    width: 30%;
+    background-color:$yellow_page;
+    border: solid 2px $blue_page;
+    & button{
+        justify-content: center;
+        width: fit-content;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        padding-top: 2%;
+        padding-right: 2%;
+        padding-left: 2%;
+    }
+}

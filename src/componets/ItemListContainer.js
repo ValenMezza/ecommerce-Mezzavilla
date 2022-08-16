@@ -1,28 +1,23 @@
 import { useState, useEffect } from "react";
 import { customFetch } from "../assets/customFetch";
 import { products } from "../assets/productos"
+import { Greeting } from "../componets/greeting";
 import { ItemList } from "./ItemList";
 
 const ItemListContainer = ({ Greeting }) => {
+
     const [listProducts, setListProducts] = useState([])
-    const [loading, setLoading] = useState(false)
     useEffect(() => {
         customFetch(products)
-            .then(data => {
-                setLoading(true)
-                setListProducts(data)
-            })
-
+            .then(data => setListProducts(data))
     }, [])
+    console.log(listProducts)
+    // console.log(productos)
+
     return (
         <>
-
-            {loading && <ItemList listProducts={listProducts}></ItemList>}            
-            {!loading && <div class="text-center">
-                <div class="spinner-border" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-            </div>}
+            <h1>{Greeting}</h1>
+            <ItemList listProducts={listProducts}/>
         </>
 
     )

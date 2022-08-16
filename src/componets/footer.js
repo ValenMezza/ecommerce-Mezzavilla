@@ -7,7 +7,6 @@ function Footer() {
     <>
       <footer>
         <NavBar></NavBar>
-
       </footer>
     </>
   )

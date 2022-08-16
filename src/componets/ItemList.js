@@ -1,9 +1,12 @@
-import { Item } from "./Item";
-const ItemList = ({listProducts}) =>{
-    return (
+import { products } from "../assets/productos"
+import { Item } from "./item"
+
+const ItemList = ({listProducts})=> {
+    console.log(listProducts)
+    return(
         <>
-            {listProducts.map(product => <Item key={product.id} product={product}/>)}
+            {listProducts.map(products =><Item key={products.id} products={products}/>)}
         </>
     )
 }
-export {ItemList}
+export {ItemList} 
