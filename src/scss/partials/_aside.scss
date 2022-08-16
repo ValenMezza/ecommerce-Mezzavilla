@@ -1,0 +1,29 @@
+@import "../variables/-variables.scss";
+
+aside{
+    display: block;
+    float: right;
+    width: 28vw;
+    & .carrito-count{
+        width: 100%;
+        display: block;
+        margin-top: 2vh;
+        margin-right: 2vw;
+        float: right;
+        text-align: center;
+        background-color:$yellow_page;
+        border: solid 2px $blue_page;
+        & button{
+            justify-content: center;
+            width: fit-content;
+            margin-left: 1vw;
+            margin-right: 1vw;
+            margin-top: 1vh;
+            margin-bottom: 1vh;
+            padding-top: 1%;
+            padding-right: 1%;
+            padding-left: 1%;
+        }
+    }
+    
+}

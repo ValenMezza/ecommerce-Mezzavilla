@@ -1,0 +1,40 @@
+@import "../variables/-variables.scss";
+
+main{
+    width: 72vw;
+    display: flex;
+    flex-wrap: wrap;
+    & .card-item{
+        width: 20vw;
+        display: block;
+        margin: 2%;
+        background-color: $yellow_page;
+        border: 2px solid $blue_page;
+        & img{
+            display: block;
+            margin-top: 2vh;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        & h3{
+            display: block;
+            text-align: center;
+        }
+        & p{
+            display: block;
+            text-align: center;
+        }
+        & button{
+            padding: 2%;
+            display: block;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1vh;
+            margin-bottom: 2vh;
+        }
+    }
+    .spinner-border{
+        display:flex;
+    }
+}

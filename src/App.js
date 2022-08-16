@@ -6,22 +6,21 @@ import { useEffect, useState } from "react";
 import ItemCount from "./componets/ItemCount";
 import { ItemListContainer } from "./componets/ItemListContainer";
 import { ItemList } from "./componets/ItemList";
-import { Item} from "./componets/item";
+import { Item} from "./componets/Item";
 function App() {
     return (
         <>
             <Header />
             <ItemCount></ItemCount>
-            <Greeting></Greeting>
-            <ItemListContainer></ItemListContainer>
+            <main>
+                <ItemListContainer/>
+            </main>
+            
             <footer>
                 <Footer></Footer>
+                
             </footer>
-            
         </>
     )
 }
-
-
 export default App;
-

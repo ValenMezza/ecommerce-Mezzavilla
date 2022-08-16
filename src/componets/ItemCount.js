@@ -33,6 +33,7 @@ function ItemCount() {
     }
     return (
         <>
+        <aside>
             <div className="carrito-count">
                 <h5><p>Productos en el carrito: </p></h5>
                 <p>{contador}</p>
@@ -40,7 +41,7 @@ function ItemCount() {
                 <button>Agregar al carrito</button>
                 <button onClick={addCarrito}>+</button>
             </div>
-
+        </aside>
         </>
     )
 }
