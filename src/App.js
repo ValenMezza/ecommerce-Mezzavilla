@@ -3,25 +3,28 @@ import Greeting from "./componets/greeting";
 import Footer from "./componets/footer";
 import {customFetch} from "./assets/customFetch";
 import { useEffect, useState } from "react";
-import ItemCount from "./componets/ItemCount";
+import {ItemCount} from "./componets/ItemCount";
 import { ItemListContainer } from "./componets/ItemListContainer";
+import { ItemDetailContainer } from "./componets/ItemDetailContainer.jsx";
 import { ItemList } from "./componets/ItemList";
-import { Item} from "./componets/item";
 function App() {
     return (
         <>
             <Header />
-            <ItemCount></ItemCount>
-            <Greeting></Greeting>
-            <ItemListContainer></ItemListContainer>
+            <aside>
+                <ItemCount></ItemCount>
+            </aside>
+            <main>
+                <ItemListContainer/>
+            </main>
+            <ItemDetailContainer>
+                {/* <ItemCount></ItemCount> */}
+            </ItemDetailContainer>
+
             <footer>
                 <Footer></Footer>
             </footer>
-            
         </>
     )
 }
-
-
-export default App;
-
+export default App; 

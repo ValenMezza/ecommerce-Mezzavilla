@@ -1,11 +1,18 @@
+@import "../variables/-variables.scss";
+
 footer{
-    background-color: red;
-    font-size: 100px;
+    background-color:$yellow_page;
     & .nav-list{
         list-style: none;
         text-decoration: none;
         color: violet
     }
+    & a{
+        color: black;
+        text-decoration: none;
+        display: inline;
+    }
     width: 100%;
     display: block;
+    bottom: 100%
 }

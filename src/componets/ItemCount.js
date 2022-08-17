@@ -44,4 +44,4 @@ function ItemCount() {
         </>
     )
 }
-export default ItemCount
+export {ItemCount};

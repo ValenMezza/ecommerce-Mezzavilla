@@ -1,25 +1,44 @@
 import { useState, useEffect } from "react";
 import { customFetch } from "../assets/customFetch";
 import { products } from "../assets/productos"
-import { Greeting } from "../componets/greeting";
 import { ItemList } from "./ItemList";
 
 const ItemListContainer = ({ Greeting }) => {
-
     const [listProducts, setListProducts] = useState([])
+    const [loading, setLoading] = useState(false)
     useEffect(() => {
         customFetch(products)
-            .then(data => setListProducts(data))
+            .then(data => {
+                setLoading(true)
+                setListProducts(data)
+            })
+
     }, [])
-    console.log(listProducts)
-    // console.log(productos)
+// fetch('https://http://localhost:3000/')
+// .then(resultado =>{
+//     // console.log(resultado )
+//     // console.log('okaaay');
+//     const productos_con_formato = resultado.json()
+//     productos_con_formato.then((formato)=>{
+//         console.log(formato)
+//     })
+//     productos_con_formato.catch((formato)=>{})
+//     // console.log(productos_con_formato)
+// })
+// .catch((error)=>{
+//     console.log('Error')
+// })
 
     return (
         <>
-            <h1>{Greeting}</h1>
-            <ItemList listProducts={listProducts}/>
+            {loading && <ItemList listProducts={listProducts}></ItemList>}
+            {!loading && <div className="text-center">
+                <div className="spinner-border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+            </div>}
         </>
 
     )
 }
-export { ItemListContainer }
+export { ItemListContainer } 
