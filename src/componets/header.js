@@ -4,12 +4,9 @@ const Header = function Header() {
     return (
         <>
             <header>
-                <img className='icono-suelosur' src="/icono-suelosur.png" alt="" />
-                <div className='img-carrito_nav' >
-                    <img className='img-carrito' src="https://cdn-icons-png.flaticon.com/512/107/107831.png" height="500px" alt="" />
-                </div>
+                    <img className='icono-argentina' src="/DiseñoLogo.png" alt="" />
+                    <div className='header_title'><h1 >ARGENTO</h1></div>
                 <NavBar></NavBar>
-                
             </header>
         </>
 

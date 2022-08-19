@@ -10,6 +10,7 @@ const ItemDetail = (({ data }) => {
                     </div>
                     <div className="especificaciones_detail">
                         <h5>Especificaciones</h5>
+                        <p className="detail_info">{data.detalles2}</p>
                         <p className="detail_info">{data.detalles}</p>
                         <p className="detail_info"><b>Precio: ${data.Precio}</b></p>
                     </div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { customFetch } from "../assets/customFetch";
 import { products } from "../assets/productos"
 import { ItemList } from "./ItemList";
+import { item, ItemDetailContainer } from "./ItemDetailContainer";
 
 const ItemListContainer = ({ Greeting }) => {
     const [listProducts, setListProducts] = useState([])
@@ -14,7 +15,20 @@ const ItemListContainer = ({ Greeting }) => {
             })
 
     }, [])
-// fetch('https://http://localhost:3000/')
+
+    return (
+        <>
+            {loading && <ItemList listProducts={listProducts}></ItemList>}
+            {!loading && <div className="text-center">
+                <div className="spinner-border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+            </div>}
+            {/* <ItemDetailContainer></ItemDetailContainer> */}
+        </>
+
+    )
+    // fetch('https://http://localhost:3000/')
 // .then(resultado =>{
 //     // console.log(resultado )
 //     // console.log('okaaay');
@@ -29,16 +43,5 @@ const ItemListContainer = ({ Greeting }) => {
 //     console.log('Error')
 // })
 
-    return (
-        <>
-            {loading && <ItemList listProducts={listProducts}></ItemList>}
-            {!loading && <div className="text-center">
-                <div className="spinner-border" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </div>
-            </div>}
-        </>
-
-    )
 }
 export { ItemListContainer } 

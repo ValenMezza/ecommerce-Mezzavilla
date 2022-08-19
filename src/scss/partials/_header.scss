@@ -1,40 +1,48 @@
 @import "../variables/-variables.scss";
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:ital,wght@1,900&display=swap');
 header {
-    background-color: aliceblue;
+    background-color: rgb(0, 0, 0);
     height: fit-content;
+
+    & .header_title{
+    width: fit-content;
+    display: inline;
+    color: white;
+
+    & h1{
+        width: 10vw;
+        margin-left: 35%;
+        display: inline;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    }
     & .img-carrito {
         width: auto;
         height: 40px;
-        display: block;
-        justify-content: flex-end;
+        display: inline;
         float: right;
     }
 
-    & .icono-suelosur{
-        width: auto;
-        height: 90px;
+    & .icono-argentina{
+        width: 10vw;
+        height: auto;
+        display: inline;
     }
-    & .img-carrito_nav {
-        // float: right;
-        width: fit-content;
-        display: block;
-        float: right;
-        margin-right: 1vw;
-        background-color: $yellow_page;
-        border: solid 2px $blue_page;
-        padding:1%;
 
-    }
 
     & nav {
-        border: solid 2px $blue_page;
-        background-color:$yellow_page;
+        border: solid 2px black;
+        background-color:rgb(247, 247, 247);
         padding: 1%;
         display: block;
 
         margin-left: auto;
         margin-right: auto;
+        & .img-carrito_nav img{
+            width: 2vw;;
+        } 
 
         & ul {
             width: 15vw;
@@ -51,17 +59,6 @@ header {
                 padding-top: 2%;
                 padding-right: 2%;
                 padding-left: 2%;
-
-
-
-                & a {
-                    display: inline;
-                    list-style: none;
-                    text-align: center;
-                    align-items: center;
-                    text-decoration: none;
-                    color: black;
-                }
             }
         }
     }
