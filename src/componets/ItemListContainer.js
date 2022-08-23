@@ -1,47 +1,39 @@
-import { useState, useEffect } from "react";
-import { customFetch } from "../assets/customFetch";
-import { products } from "../assets/productos"
+import ItemCount from "./ItemCount"
+import { useEffect, useState } from "react";
+import { products } from "../assets/productos";
 import { ItemList } from "./ItemList";
-import { item, ItemDetailContainer } from "./ItemDetailContainer";
+import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({ Greeting }) => {
-    const [listProducts, setListProducts] = useState([])
-    const [loading, setLoading] = useState(false)
-    useEffect(() => {
-        customFetch(products)
-            .then(data => {
-                setLoading(true)
-                setListProducts(data)
-            })
 
-    }, [])
+const ItemListContainer =() =>{
+    const [data, setData] = useState([]);
+    const {categoriaId }= useParams();
 
-    return (
+
+
+    useEffect(()=>{
+        const getData = new Promise(resolve=> {
+            setTimeout(() => {
+                resolve(products)
+            }, 1000);
+        });           
+        if (categoriaId) {
+            getData.then(res => setData(res.filter(product => product.categoria === categoriaId)))
+        } else{
+            getData.then(res => setData(res))
+        }
+    }, [categoriaId])
+
+
+    const onAdd =(quantity)=>{
+        console.log(`Compraste ${quantity} unidades`)
+    }
+    return(
         <>
-            {loading && <ItemList listProducts={listProducts}></ItemList>}
-            {!loading && <div className="text-center">
-                <div className="spinner-border" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </div>
-            </div>}
-            {/* <ItemDetailContainer></ItemDetailContainer> */}
+            <ItemList data={data}/>
+
+            {/* <ItemCount initial={0} stock={10} onAdd={onAdd}/> */}
         </>
-
     )
-    // fetch('https://http://localhost:3000/')
-// .then(resultado =>{
-//     // console.log(resultado )
-//     // console.log('okaaay');
-//     const productos_con_formato = resultado.json()
-//     productos_con_formato.then((formato)=>{
-//         console.log(formato)
-//     })
-//     productos_con_formato.catch((formato)=>{})
-//     // console.log(productos_con_formato)
-// })
-// .catch((error)=>{
-//     console.log('Error')
-// })
-
 }
 export { ItemListContainer } 

@@ -21,7 +21,7 @@ header {
     & .img-carrito {
         width: auto;
         height: 40px;
-        display: inline;
+        display: block;
         float: right;
     }
 
@@ -32,11 +32,11 @@ header {
     }
 
 
-    & nav {
-        border: solid 2px black;
+    & .nav-list {
+        border: solid 2px rgb(0, 0, 0);
         background-color:rgb(247, 247, 247);
         padding: 1%;
-        display: block;
+        display: in;
 
         margin-left: auto;
         margin-right: auto;
@@ -50,7 +50,7 @@ header {
             margin-right: auto;
             justify-items: center;
 
-            & li {
+            & Link {
                 display: inline;
                 background-color: rgb(213, 215, 88);
                 margin-left: 2vw;
@@ -62,4 +62,7 @@ header {
             }
         }
     }
+}
+main .card-item{
+    background-color: violet;
 }

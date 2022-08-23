@@ -1,60 +1,29 @@
 @import "../variables/-variables.scss";
 
 .detail_container {
-    width: 65vw;
+    width: 75vw;
     display: block;
+    margin-top: 2vh;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10vh;
-    & h4{
-        text-align: center;
-    }
-    & .img_detail{
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-
-    }
-    & .detail_item {
-        width: 100%;
-        background-color: whitesmoke;
-        border: 4px $blue_page solid;
-
-        & .detail_img {
-            margin-top: 2vh;
-            width: 50vw;
-            & img{
-                text-align: center;
-                display: block;
-                justify-items: center;
-                margin-right: auto;
-                margin-left: auto;
-            }
-        }
-
-        & .especificaciones_detail {
-            margin: 1%;
-            display: block;
-            text-align: center;
-            flex-wrap: wrap;
-        }
-
-    }
-
-
-    & .carrito-count {
-        margin-right: auto;
-        margin-left: auto;
-        margin-bottom: 2vh;
-        display: block;
-        text-align: center;
+    border: 2px solid black;
+    background-color: whitesmoke;
+    & .img-prod{
+        display: inline;
         width: 40%;
-        background-color: $yellow_page;
-        border-radius: 13%;
-        border: 2px solid $blue_page;
-        & button{
-            padding: 2%;
-            margin: 1%
+        & .img-thumbnail{
+            width: auto;
+            border: 2px solid black;
+        }
+    }
+    & .info-prod{
+        width: 60%;
+
+        float: right;
+        display: inline;
+        & .info-prod_list{
+            width: 100%;
         }
     }
 }

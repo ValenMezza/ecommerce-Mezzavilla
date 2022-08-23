@@ -1,16 +1,113 @@
 @import "../variables/-variables.scss";
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
-html body #root{
+
+html body #root {
     height: 100%;
     background-color: $fondo;
 }
-#root{
+
+#root {
+    height: 100%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
+//     & main {
+
+
+//         & .card-item {
+//             height: 50%;
+//             width: 20vw;
+//             display: flex;
+//             flex-wrap: wrap;
+//             margin: 2%;
+//             background-color: $cards-backgroud;
+//             border: 2px solid black;
+//             border-radius: 5px;
+
+//             & img {
+//                 border: 2px solid black;
+//                 border-radius: 5px;
+//                 width: 90%;
+//                 display: block;
+//                 margin-top: 2vh;
+//                 margin-right: auto;
+//                 margin-left: auto;
+//             }
+
+//             & h3 {
+//                 font-size: 1rem;
+//                 display: block;
+//                 text-align: center;
+//             }
+
+//             & p {
+//                 display: flex;
+//                 flex-direction: row;
+
+//                 text-align: center;
+//             }
+
+//             & .product-detail {
+//                 text-decoration: none;
+//                 padding: 3%;
+//                 display: block;
+//                 justify-content: center;
+//                 margin-left: auto;
+//                 margin-right: auto;
+//                 margin-top: 1vh;
+//                 margin-bottom: 1vh;
+//                 background-color: black;
+//                 color: white;
+//                 border-radius: 4px;
+//                 box-shadow: 2px 2px 5px rgb(103, 99, 99);
+//             }
+//         }
+
+//         & .carrito-count {
+//             width: 30%;
+//             display: block;
+//             margin-top: 2vh;
+//             margin-right: auto;
+//             margin-left: auto;
+//             text-align: center;
+//             background-color: $yellow_page;
+//             border: solid 2px $blue_page;
+
+//             & button {
+//                 justify-content: center;
+//                 width: fit-content;
+//                 margin-left: 1vw;
+//                 margin-right: 1vw;
+//                 margin-top: 1vh;
+//                 margin-bottom: 1vh;
+//                 padding-top: 1%;
+//                 padding-right: 1%;
+//                 padding-left: 1%;
+//             }
+//         }
+
+//         & img {
+//             height: 30px;
+//             display: flex;
+//         }
+
+//         & .img-carrito_nav {
+//             // float: right;
+//             display: block;
+//             float: right;
+//             margin-right: 1vw;
+//             background-color: $yellow_page;
+//             padding: 1%;
+
+//         }
+//     }
+// }
+
 // h1{
 //     color: black;
 // }
