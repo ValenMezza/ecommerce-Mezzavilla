@@ -1,23 +1,25 @@
-import React from 'react';
+import ItemCount from "./ItemCount"
+import { useState, useContext } from "react"
+import { useCartContext } from "../assets/CartContext";
+import {cartProvider} from "../assets/CartContext"
+
+
+import { Link } from "react-router-dom"
 export const ItemDetail = ({ data }) => {
+    const [goToCart, setGoToCart] = useState(false)
+    const {addProduct}= useCartContext();
+
+    const onAdd = (quantity) => {
+        setGoToCart(true)
+        addProduct(data , quantity)
+    }
     return (
         <>
             <div className='detail_container'>
-                {/* <div className='img-prod'>
-                    <img src={data.img} className="img-thumbnail" alt="..."/>
-                </div>
-                <div className='info-prod'>
-                    <div className='info-prod_list'>
-                        <h1>{data.product}</h1>
-                        <h3>${data.Precio}</h3>
-                        <p>{data.detalles}</p>
-                        <p>{data.detalles2}</p>
-                    </div>
-                </div>*/}
                 <div className="card mb-3" >
                     <div className="row g-0">
                         <div className="col-md-4">
-                            <img src={data.img} className="img-fluid rounded-start" alt="..."/>
+                            <img src={data.img} className="img-fluid rounded-start" alt="..." />
                         </div>
                         <div className="col-md-8">
                             <div className="card-body">
@@ -31,7 +33,14 @@ export const ItemDetail = ({ data }) => {
                                 <p className="card-text">{data.detalles2}</p>
                             </div>
                         </div>
+                        {
+                            goToCart
+                                ?<Link to='/cart'>Terminar compra</Link>:(<ItemCount initial={0} stock={10} onAdd={onAdd} />
+                        )}
+
+                        
                     </div>
+
                 </div>
 
             </div>

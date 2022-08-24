@@ -5,7 +5,7 @@ import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
 
 
-const ItemListContainer =() =>{
+export const ItemListContainer =() =>{
     const [data, setData] = useState([]);
     const {categoriaId }= useParams();
 
@@ -25,9 +25,9 @@ const ItemListContainer =() =>{
     }, [categoriaId])
 
 
-    const onAdd =(quantity)=>{
-        console.log(`Compraste ${quantity} unidades`)
-    }
+    // const onAdd =(quantity)=>{
+    //     console.log(`Compraste ${quantity} unidades`)
+    // }
     return(
         <>
             <ItemList data={data}/>
@@ -36,4 +36,4 @@ const ItemListContainer =() =>{
         </>
     )
 }
-export { ItemListContainer } 
+export default ItemListContainer;

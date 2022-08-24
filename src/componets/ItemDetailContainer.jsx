@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { products } from "../assets/productos";
 
 
-export const ItemDetailContainer = () => {
+const ItemDetailContainer = () => {
     const [data , setData] =useState({})
     const {detalleId} = useParams();
 
@@ -23,5 +23,4 @@ export const ItemDetailContainer = () => {
         </>
     )
 }
-export default ItemDetailContainer;
-// export ItemDetailContainer <
+export {ItemDetailContainer};
