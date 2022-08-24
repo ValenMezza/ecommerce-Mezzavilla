@@ -8,7 +8,6 @@ function App() {
         <>
             <BrowserRouter>
                 <Header />
-                
                 <Main/>
                 <Footer/> 
             </BrowserRouter>
@@ -17,3 +16,4 @@ function App() {
 }
 export default App; 
 
+//En main.js está el {cartProvider} que está declarado previamente en la carpeta assest/CartContext. En es carpeta está importado el useContext.

@@ -7,6 +7,7 @@ import { ItemListContainer } from "./ItemListContainer"
 const Main = () => {
     return (
         <main>
+            <CartProvider>
                 <Routes>
                     <Route path="/" element={<ItemListContainer></ItemListContainer>} />
                     {/* <Route path="/categoria/:${product.categoria} element={<ItemListContainer/>}/> */}
@@ -15,6 +16,7 @@ const Main = () => {
                     <Route path='/detalle/:detalleId' element={<ItemDetailContainer />} />
                     <Route path='/cart' element={<Cart />} />
                 </Routes>
+            </CartProvider>
         </main>
     )
 }
