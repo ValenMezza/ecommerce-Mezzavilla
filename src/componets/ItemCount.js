@@ -2,7 +2,8 @@ import Header from "./header"
 import { useEffect, useState } from "react";
 
 
-export function ItemCount({initial, stock ,onAdd}) {
+
+export const ItemCount=(({initial, stock ,onAdd})=> {
     const [count, setCount] = useState(0)
 
     // let contador = Resultado[0]
@@ -23,7 +24,7 @@ export function ItemCount({initial, stock ,onAdd}) {
         // if (contador === 0) {
         //     return (
         //         <p>No hay productos en el carrito</p>
-        //     )      
+        //     )        
         // }
         setCount(count - 1)
         console.log(count)
@@ -40,5 +41,5 @@ export function ItemCount({initial, stock ,onAdd}) {
 
         </>
     )
-}
-export default ItemCount;
+})
+export default ItemCount; 

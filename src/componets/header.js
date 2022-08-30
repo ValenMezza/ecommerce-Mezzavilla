@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom'
-import Greeting from './greeting.js'
 import NavBar from './NavBar.js'
 const Header = function Header() {
     return (
